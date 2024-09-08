@@ -11,7 +11,7 @@ const Page = async({params}) => {
     const movieDetail = await getMovie(id)
   return (
     <div className='relative p-7 min-h-screen'>
-      <Image style={{objectFit:'cover'}} fill width={470} height={300} src={`https://image.tmdb.org/t/p/original/${movieDetail?.backdrop_path || movieDetail?.poster_path}`}/>
+      <Image style={{objectFit:'cover'}} fill src={`https://image.tmdb.org/t/p/original/${movieDetail?.backdrop_path || movieDetail?.poster_path}`}/>
       <div className='absolute'>
         <div className='text-4xl font-bold my-3'>{movieDetail?.title}</div>
         <div className='w-1/2'>{movieDetail?.overview}</div>
